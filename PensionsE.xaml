@@ -1,0 +1,83 @@
+﻿<Window x:Class="ProjetCGPI_v0.PensionsE"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetCGPI_v0"
+        mc:Ignorable="d"
+        Title="Retraites Etrangères" Height="830" Width="800" Background="#FF867E7E" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="268*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="312*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Traitement Fiscal des Pensions  et Retraites d'Origine Etrangère" HorizontalAlignment="Left" Margin="28,15,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="608" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.073"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.332"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,69,0,0" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="800" Background="#FFF33D06" Height="8"/>
+        <Image Height="100" Width="100" Grid.ColumnSpan="2" Margin="56,352,21,362"/>
+        <Image Margin="25,6,62,687" Source="/calculette.png" Grid.ColumnSpan="2"/>
+        <Label Content="Revenu Fiscal de Référence " HorizontalAlignment="Left" Margin="100,125,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="39" Width="239" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Quotient Familial :" HorizontalAlignment="Left" Margin="26,182,0,0" VerticalAlignment="Top" Height="29" Width="168" FontWeight="Bold" FontSize="18" Grid.Column="2"/>
+        <Label Content="Montant de la Pension du Déclarant 1 :" HorizontalAlignment="Left" Margin="19,238,0,0" VerticalAlignment="Top" Grid.ColumnSpan="4" Height="45" Width="363" FontWeight="Bold" FontSize="18" Grid.Column="1"/>
+        <Label Content="Montant de la Pension du Déclarant 2 :" HorizontalAlignment="Left" Margin="19,283,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="40" Width="342" FontWeight="Bold" FontSize="18" Grid.Column="1"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,355,0,0" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="800" Background="#FFF33D06" Height="8"/>
+        <TextBox x:Name="RFR" Grid.Column="3" HorizontalAlignment="Left" Margin="6,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="39" FontSize="20" FontWeight="Bold" TabIndex="1" TextAlignment="Center" Grid.ColumnSpan="2" Text="0"/>
+        <ComboBox x:Name="ComboQF" Grid.Column="2" HorizontalAlignment="Left" Margin="259,182,0,0" VerticalAlignment="Top" Width="84" Height="29" TabIndex="2" SelectionChanged="ComboQF_SelectionChanged" FontSize="16" Grid.ColumnSpan="3">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="1,5"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="2,5"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="3,5"/>
+        </ComboBox>
+        <TextBox x:Name="Pension1" Grid.Column="3" HorizontalAlignment="Left" Margin="33,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="39" FontSize="20" FontWeight="Bold" TabIndex="3" TextAlignment="Center" Grid.ColumnSpan="2" Text="0"/>
+        <TextBox x:Name="Pension2" Grid.Column="3" HorizontalAlignment="Left" Margin="33,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="39" FontSize="20" FontWeight="Bold" TabIndex="4" TextAlignment="Center" Grid.ColumnSpan="2" Text="0"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="0,668,0,0" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="800" Background="#FFF33D06" Height="8"/>
+        <Label Content="Parts" HorizontalAlignment="Left" Margin="38,182,0,0" VerticalAlignment="Top" Height="29" Width="70" FontWeight="Bold" FontSize="18" Grid.Column="4"/>
+        <Label Grid.Column="2" Content="Saisie des Données" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="#FFF5EC0D"/>
+        <Label Content="Résultats :" HorizontalAlignment="Left" Margin="100,383,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="#FFF5EC0D" Grid.ColumnSpan="2"/>
+        <Label x:Name="CSG1" Content="Montant  de la CSG Déclarant 1 :" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="45" Width="289" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="CSG2" Content="Montant  de la CSG Déclarant 2 :" HorizontalAlignment="Left" Margin="13,466,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="45" Width="289" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="CSG_Ded1" Content="Dont CSG Déductible :" HorizontalAlignment="Left" Margin="6,430,0,0" VerticalAlignment="Top" Height="45" Width="221" FontWeight="Bold" FontSize="18" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Label x:Name="CSG_Ded2" Content="Dont CSG Déductible :" HorizontalAlignment="Left" Margin="5,466,0,0" VerticalAlignment="Top" Height="45" Width="222" FontWeight="Bold" FontSize="18" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Label x:Name="CSG1_Copy" Content="Montant  Net à reporter dans AM Déclarant 1 :" HorizontalAlignment="Left" Margin="25,561,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="45" Width="420" FontWeight="Bold" FontSize="18"/>
+        <Label x:Name="CSG1_Copy1" Content="Montant  Net à reporter dans BM Déclarant 2 :" HorizontalAlignment="Left" Margin="25,606,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="45" Width="420" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Report dans le formulaire 2042 :" HorizontalAlignment="Left" Margin="70,527,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="#FFF5EC0D" Grid.ColumnSpan="3" Width="232"/>
+        <TextBox x:Name="CSGDec1" Grid.Column="2" HorizontalAlignment="Left" Margin="125,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Height="33" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center"/>
+        <TextBox x:Name="CSGDec2" Grid.Column="2" HorizontalAlignment="Left" Margin="125,471,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Height="33" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center"/>
+        <TextBox x:Name="CSGDed1" Grid.Column="4" HorizontalAlignment="Left" Margin="159,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Height="33" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center"/>
+        <TextBox x:Name="CSGDed2" Grid.Column="4" HorizontalAlignment="Left" Margin="159,472,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Height="33" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center"/>
+        <TextBox x:Name="MontantNetAM" Grid.Column="3" HorizontalAlignment="Left" Margin="20,561,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="39" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="MontantNetBM" Grid.Column="3" HorizontalAlignment="Left" Margin="20,606,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="39" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <Button x:Name="Btn_Calcul" Grid.Column="2" Content="RESULTATS" HorizontalAlignment="Left" Margin="139,337,0,0" VerticalAlignment="Top" Height="38" Width="157" FontSize="18" FontWeight="Bold" Background="#FFF12E0F" Click="Btn_Calcul_Click" Grid.ColumnSpan="2">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="AnneeRef" Grid.Column="2" HorizontalAlignment="Left" Margin="167,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Height="39" FontSize="20" FontWeight="Bold" TabIndex="1" IsReadOnly="True" Background="{x:Null}" AcceptsTab="True" TextAlignment="Center"/>
+        <Label x:Name="CSG1_Copy2" Content="Taux de CSG pour le Foyer Fiscal :" HorizontalAlignment="Left" Margin="197,383,0,0" VerticalAlignment="Top" Height="32" Width="229" FontWeight="Bold" FontSize="14" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="TauxCSGFoyer" Grid.Column="4" HorizontalAlignment="Left" Margin="115,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" Height="33" FontSize="20" FontWeight="Bold" IsReadOnly="True" Background="{x:Null}" TextAlignment="Center"/>
+        <Button x:Name="Btn_Clear" Content="Autre Calculs" HorizontalAlignment="Center" Margin="0,681,0,0" VerticalAlignment="Top" Height="93" Width="100" FontWeight="Bold" Click="Btn_Clear_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/calculette2 (2).png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_Sortie" Grid.Column="4" Content="" HorizontalAlignment="Left" Margin="181,686,0,0" VerticalAlignment="Top" Height="88" Width="99" Click="Btn_Sortie_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/exit-symbol-1_icon-icons.com_70162.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

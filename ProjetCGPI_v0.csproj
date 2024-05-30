@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assurance 3.png" />
+    <None Remove="assurance.png" />
+    <None Remove="AV Decès.png" />
+    <None Remove="AV Rachat.png" />
+    <None Remove="calculette.png" />
+    <None Remove="calculette2 %282%29.png" />
+    <None Remove="exit-symbol-1_icon-icons.com_70162.png" />
+    <None Remove="percentage_numero_porcentaje_phone_celular_icon_211153.png" />
+    <None Remove="product_document_file_1512.png" />
+    <None Remove="tax.png" />
+    <None Remove="website_web_12218.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="assurance 3.png" />
+    <Resource Include="assurance.png" />
+    <Resource Include="AV Decès.png" />
+    <Resource Include="AV Rachat.png" />
+    <Resource Include="calculette.png" />
+    <Resource Include="calculette2 (2).png" />
+    <Resource Include="exit-symbol-1_icon-icons.com_70162.png" />
+    <Resource Include="percentage_numero_porcentaje_phone_celular_icon_211153.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="product_document_file_1512.png" />
+    <Resource Include="tax.png" />
+    <Resource Include="website_web_12218.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
+</Project>

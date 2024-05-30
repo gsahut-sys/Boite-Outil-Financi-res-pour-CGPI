@@ -1,0 +1,25 @@
+﻿<Window x:Class="ProjetCGPI_v0.Documentation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetCGPI_v0"
+        mc:Ignorable="d"
+        Title="Documentation" Height="1000" Width="1000" WindowStartupLocation="CenterScreen" Background="#FF867E7E">
+    <Grid>
+        <Label Content="DOCUMENTATION et REFERENCES" HorizontalAlignment="Center" Margin="0,27,0,0" VerticalAlignment="Top" Height="60" Width="607" FontSize="36" FontWeight="Bold"/>
+        <Label Content="" HorizontalAlignment="Center" Margin="0,92,0,0" VerticalAlignment="Top" Width="1000" Background="#FFF33D06" Height="8"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="32,27,0,0" VerticalAlignment="Top" Width="100" Source="/product_document_file_1512.png"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="861,27,0,0" VerticalAlignment="Top" Width="100" Source="/website_web_12218.png"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="839,819,0,0" VerticalAlignment="Top" Height="120" Width="122" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/exit-symbol-1_icon-icons.com_70162.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_Doc_Economie" Content="Economie.gouv.fr" HorizontalAlignment="Left" Margin="566,369,0,0" VerticalAlignment="Top" Height="102" Width="334" FontWeight="Bold" FontSize="24" Click="Btn_Doc_Economie_Click" Background="#FF4ECA0A"/>
+        <Button x:Name="Services_Publics" Content="Assurance-vie : Fiscalité" HorizontalAlignment="Left" Margin="110,166,0,0" VerticalAlignment="Top" Height="120" Width="346" FontWeight="Bold" FontSize="24" Click="Services_Publics_Click" Background="#FF4ECA0A"/>
+        <Button x:Name="Service_Pub" Content="Fonctionnement de l'AssuranceVie" HorizontalAlignment="Left" Margin="110,369,0,0" VerticalAlignment="Top" Height="102" Width="346" FontWeight="Bold" Click="Service_Pub_Click" FontSize="20" Background="#FF4ECA0A"/>
+        <Button x:Name="Btn_2041GG" Content="Revenus de Source Etrangère" HorizontalAlignment="Left" Margin="566,166,0,0" VerticalAlignment="Top" Height="120" Width="334" FontSize="22" FontWeight="Bold" Click="Btn_2041GG_Click" Background="#FF4ECA0A"/>
+
+    </Grid>
+</Window>

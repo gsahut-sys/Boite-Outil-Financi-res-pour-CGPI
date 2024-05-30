@@ -1,0 +1,93 @@
+﻿<Window x:Class="ProjetCGPI_v0.FiscaliteDcAV"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetCGPI_v0"
+        mc:Ignorable="d"
+        Title="Fisclité En Cas de Décès" Height="1050" Width="1000" WindowStartupLocation="CenterScreen" Background="#FF867E7E" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="409*"/>
+            <ColumnDefinition Width="91*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Fiscalité de l'Assurance-vie en cas de Décès" HorizontalAlignment="Left" Margin="256,20,0,0" VerticalAlignment="Top" Height="43" Width="488" FontSize="22" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="18" Margin="0,68,0,0" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFFB3509" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="76" Margin="40,10,0,0" VerticalAlignment="Top" Width="77" Source="/calculette.png" RenderTransformOrigin="0.28,0.34"/>
+        <Label Content="Date de Souscription du Contrat :" HorizontalAlignment="Left" Margin="237,99,0,0" VerticalAlignment="Top" Width="334" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Valorisation du Contrat au Jour du Décès :" HorizontalAlignment="Left" Margin="134,154,0,0" VerticalAlignment="Top" Width="412" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Part Revenant au Conjoint Survivant :" HorizontalAlignment="Left" Margin="171,191,0,0" VerticalAlignment="Top" Width="360" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Nombre de Bénéficiaires indiqués dans la Clause :" HorizontalAlignment="Left" Margin="268,238,0,0" VerticalAlignment="Top" Width="504" FontSize="20" FontWeight="Bold"/>
+        <Label Content="(Hors Conjoint Survivant)" HorizontalAlignment="Left" Margin="386,266,0,0" VerticalAlignment="Top" Width="228" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Versements Effectués avant le 13 octobre 1998 :" HorizontalAlignment="Left" Margin="30,302,0,0" VerticalAlignment="Top" Width="478" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Versements Effectués après le 13 octobre 1998 :" HorizontalAlignment="Left" Margin="30,339,0,0" VerticalAlignment="Top" Width="478" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Avant les 70 ans du Souscripteur:" HorizontalAlignment="Left" Margin="367,402,0,0" VerticalAlignment="Top" Width="319" FontSize="20" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="18" Margin="0,535,0,0" Stroke="Black" VerticalAlignment="Top" Width="1010" Fill="#FFFB3509" Grid.ColumnSpan="2"/>
+        <Label Content="Exonération Liée au Contrat :" HorizontalAlignment="Left" Margin="18,599,0,0" VerticalAlignment="Top" Width="292" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Exonération du Conjoint Survivant :" HorizontalAlignment="Left" Margin="484,600,0,0" VerticalAlignment="Top" Width="354" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="Part du Contrat Soumis aux 20%:" HorizontalAlignment="Left" Margin="189,666,0,0" VerticalAlignment="Top" Width="321" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Montant ajouté à l'Actif Successoral " HorizontalAlignment="Left" Margin="200,796,0,0" VerticalAlignment="Top" Width="348" FontSize="20" FontWeight="Bold"/>
+        <Label Content="( Abattement de 30 500 € déduit):" HorizontalAlignment="Left" Margin="214,814,0,0" VerticalAlignment="Top" Width="386" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Article 990i du CGI" HorizontalAlignment="Left" Margin="30,680,0,0" VerticalAlignment="Top" FontSize="16" FontStyle="Italic" Foreground="#FFEDE515" FontWeight="Bold"/>
+        <Label Content="Article 757b du CGI" HorizontalAlignment="Left" Margin="34,810,0,0" VerticalAlignment="Top" FontSize="16" FontStyle="Italic" Width="154" Foreground="#FFEDE515" RenderTransformOrigin="-2.595,1.088" FontWeight="Bold"/>
+        <TextBox x:Name="DateSous" HorizontalAlignment="Left" Margin="576,99,0,0" TextWrapping="Wrap" Text="JJ MM AAAA" VerticalAlignment="Top" Width="148" Height="37" TextAlignment="Center" FontSize="20" TabIndex="1"/>
+        <TextBox x:Name="ValoContrat" HorizontalAlignment="Left" Margin="558,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="37" TextAlignment="Center" FontSize="20" FontWeight="Bold" TabIndex="2"/>
+        <TextBox x:Name="PartCJ" HorizontalAlignment="Left" Margin="558,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="37" TextAlignment="Center" FontSize="20" FontWeight="Bold" TabIndex="3"/>
+        <TextBox x:Name="NbBenef" HorizontalAlignment="Left" Margin="750,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="37" TextAlignment="Center" FontSize="20" FontWeight="Bold" TabIndex="4" Text="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="VerstAvant98" HorizontalAlignment="Left" Margin="514,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" TabIndex="5" Text="0"/>
+        <TextBox x:Name="VerstApres98" HorizontalAlignment="Left" Margin="514,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" IsTabStop="False" TabIndex="6" Text="0"/>
+        <TextBox x:Name="PrimeAp70" HorizontalAlignment="Left" Margin="710,442,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" TabIndex="8" Text="0" Grid.ColumnSpan="2"/>
+        <Label Content="Saisie des Données" HorizontalAlignment="Left" Margin="411,60,0,0" VerticalAlignment="Top" Width="178" FontSize="18" FontWeight="Bold" Foreground="#FFEDE515"/>
+        <TextBox x:Name="Exo" HorizontalAlignment="Left" Margin="307,600,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="36" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True"/>
+        <TextBox x:Name="ExoCJ" HorizontalAlignment="Left" Margin="6,601,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="36" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True" Grid.Column="1"/>
+        <TextBox x:Name="Part20pourcent" HorizontalAlignment="Left" Margin="515,666,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True"/>
+        <TextBox x:Name="Cumul757bR" HorizontalAlignment="Left" Margin="562,814,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="36" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True"/>
+        <Button x:Name="Btn_Calculs1" Content="CALCULS" HorizontalAlignment="Left" Margin="390,519,0,0" VerticalAlignment="Top" Height="50" Width="187" FontSize="20" FontWeight="Bold" Background="#FFFB0909" Click="Btn_Calculs_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Après les 70 ans du Souscripteur:" HorizontalAlignment="Left" Margin="368,434,0,0" VerticalAlignment="Top" Width="318" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="PrimeAv70" HorizontalAlignment="Left" Margin="710,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" TabIndex="7" Text="0" Grid.ColumnSpan="2"/>
+        <Label Content="Pour Les Contrats après le 20/11/1991:" HorizontalAlignment="Left" Margin="10,402,0,0" VerticalAlignment="Top" Width="308" FontWeight="Bold" Foreground="#FFEDE515" FontSize="16"/>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="0,400,0,0" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFFB3509" Grid.ColumnSpan="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="4" Margin="0,483,0,0" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFFB3509" Grid.ColumnSpan="2"/>
+        <Label Content="PRIMES VERSEES:" HorizontalAlignment="Left" Margin="202,424,0,0" VerticalAlignment="Top" Width="165" Foreground="#FF100F0F" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Part du Contrat Soumis aux 31.25%:" HorizontalAlignment="Left" Margin="170,704,0,0" VerticalAlignment="Top" Width="344" FontSize="20" FontWeight="Bold"/>
+        <TextBox x:Name="Part3125pourcent" HorizontalAlignment="Left" Margin="514,709,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True"/>
+        <Label Content="Soit" HorizontalAlignment="Left" Margin="710,669,0,0" VerticalAlignment="Top" Width="34" FontWeight="Bold"/>
+        <Label Content="Soit" HorizontalAlignment="Left" Margin="710,713,0,0" VerticalAlignment="Top" Width="34" FontWeight="Bold" RenderTransformOrigin="0.559,2.775"/>
+        <TextBox x:Name="Part20Euros" HorizontalAlignment="Left" Margin="750,665,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Part3125Euros" HorizontalAlignment="Left" Margin="750,709,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="38" TextAlignment="Center" FontSize="20" FontWeight="Bold" Background="{x:Null}" IsReadOnly="True" Grid.ColumnSpan="2"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="119,672,0,0" VerticalAlignment="Top" Width="34" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="119,713,0,0" VerticalAlignment="Top" Width="34" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="Résultats" HorizontalAlignment="Left" Margin="59,527,0,0" VerticalAlignment="Top" Width="92" FontSize="18" FontWeight="Bold" Foreground="#FFEDE515"/>
+        <Label Content="Résultats" HorizontalAlignment="Left" Margin="23,527,0,0" VerticalAlignment="Top" Width="92" FontSize="18" FontWeight="Bold" Foreground="#FFEDE515" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="18" Margin="-5,893,0,0" Stroke="Black" VerticalAlignment="Top" Width="1010" Fill="#FFFB3509" Grid.ColumnSpan="2"/>
+        <Button x:Name="Btn_AutreCalculs" Content="AUTTRE CALCUL" HorizontalAlignment="Left" Margin="61,929,0,0" VerticalAlignment="Top" Height="63" Width="119" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" Foreground="#FFEDE3E3" Click="Btn_AutreCalculs_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF25E465" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.456"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="42,916,0,0" VerticalAlignment="Top" Height="88" Width="94" Click="Button_Click" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/exit-symbol-1_icon-icons.com_70162.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

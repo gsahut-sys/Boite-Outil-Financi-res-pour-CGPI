@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DispatchAV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Documentation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FiscaliteDcAV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PensionsE.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Performance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Performance_Pondéree.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RachatAP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RachatAV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Web.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Retraites.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DispatchAV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Documentation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FiscaliteDcAV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PensionsE.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Performance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Performance_Pondéree.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RachatAP.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RachatAV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Web.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Retraites.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

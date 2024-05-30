@@ -1,0 +1,91 @@
+﻿<Window x:Class="ProjetCGPI_v0.RachatAP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetCGPI_v0"
+        mc:Ignorable="d"
+        Title="RachatAP" Height="880" Width="1000" Background="#FF867E7E" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="459*"/>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="445*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="RACHAT CONTRAT D'ASSURANCE-VIE (APRES LE 29 SEPTEMBRE 2017)" HorizontalAlignment="Left" Margin="140,29,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="34" Width="750" FontSize="22" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="23" Margin="0,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="1000" Grid.ColumnSpan="3" Fill="#FFF92A0A"/>
+        <Label Content="Date de Souscription du Contrat :" HorizontalAlignment="Left" Margin="76,139,0,0" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Valorisation du Contrat :" HorizontalAlignment="Left" Margin="68,139,0,0" VerticalAlignment="Top" Width="223" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Versement Initial :" HorizontalAlignment="Left" Margin="184,188,0,0" VerticalAlignment="Top" Width="176" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Versements Complémentaires :" HorizontalAlignment="Left" Margin="76,240,0,0" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Rachats Précedents :" HorizontalAlignment="Left" Margin="164,290,0,0" VerticalAlignment="Top" Width="196" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Montant du Rachat :" HorizontalAlignment="Left" Margin="68,188,0,0" VerticalAlignment="Top" Width="223" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Statut Matrimonial :" HorizontalAlignment="Left" Margin="68,240,0,0" VerticalAlignment="Top" Width="223" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="TMI Estimée :" HorizontalAlignment="Left" Margin="68,290,0,0" VerticalAlignment="Top" Width="223" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="DateSousM" HorizontalAlignment="Left" Margin="379,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" IsUndoEnabled="False" TabIndex="1" Background="{x:Null}" BorderThickness="3,3,3,3" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="ValoContratM" HorizontalAlignment="Left" Margin="200,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" Grid.Column="2" TabIndex="2" BorderThickness="3,3,3,3" Background="{x:Null}"/>
+        <TextBox x:Name="MontantRachatM" HorizontalAlignment="Left" Margin="200,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" Grid.Column="2" TabIndex="4" BorderThickness="3,3,3,3" Background="{x:Null}"/>
+        <TextBox x:Name="VerstInitM" HorizontalAlignment="Left" Margin="365,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" TabIndex="3" BorderThickness="3,3,3,3" Background="{x:Null}" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="VerstCompM" HorizontalAlignment="Left" Margin="365,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" Text="0" TabIndex="5" BorderThickness="3,3,3,3" Background="{x:Null}" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="RachatPrecM" HorizontalAlignment="Left" Margin="365,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" Text="0" TabIndex="6" BorderThickness="3,3,3,3" Background="{x:Null}" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="StatutMatM" HorizontalAlignment="Left" Margin="200,240,0,0" VerticalAlignment="Top" Width="120" Height="34" FontSize="18" FontWeight="Bold" Grid.Column="2" BorderThickness="3,3,3,3" Background="{x:Null}">
+            <ComboBoxItem Content="Marié(e)"/>
+            <ComboBoxItem Content="Pacsé(e)"/>
+            <ComboBoxItem Content="Célibataire"/>
+            <ComboBoxItem Content="Veuf(ve)"/>
+            <ComboBoxItem/>
+        </ComboBox>
+        <ComboBox x:Name="ComboboxTMIM" HorizontalAlignment="Left" Margin="200,291,0,0" VerticalAlignment="Top" Width="84" Height="33" FontSize="16" FontWeight="Bold" Grid.Column="2" Text="0" BorderThickness="3,3,3,3">
+            <ComboBoxItem Content="0"/>
+            <ComboBoxItem Content="11"/>
+            <ComboBoxItem Content="30"/>
+            <ComboBoxItem Content="41"/>
+            <ComboBoxItem Content="45"/>
+        </ComboBox>
+        <Label Content="%" HorizontalAlignment="Left" Margin="292,293,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Column="2"/>
+        <Label Content="Montant des Encours nets en Assurance-vie :" HorizontalAlignment="Left" Margin="214,351,0,0" VerticalAlignment="Top" Width="424" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="MontantEncoursM" HorizontalAlignment="Left" Margin="65,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" Height="34" FontSize="18" Grid.Column="2" TabIndex="7" BorderThickness="3,3,3,3" Background="{x:Null}" Text="0" FontStyle="Italic"/>
+        <Rectangle HorizontalAlignment="Left" Height="23" Stroke="Black" VerticalAlignment="Center" Width="1010" Grid.ColumnSpan="3" Fill="#FFF92A0A"/>
+        <Label Content="Saisie des Données" HorizontalAlignment="Left" Margin="0,107,0,0" VerticalAlignment="Top" Width="180" Foreground="#FFF90606" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Résultats " HorizontalAlignment="Left" Margin="0,441,0,0" VerticalAlignment="Top" Width="180" Foreground="#FFF90606" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Plus ou Moins Value :" HorizontalAlignment="Left" Margin="22,473,0,0" VerticalAlignment="Top" Width="196" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Plus ou Moins Value Après Abattement :" HorizontalAlignment="Left" Margin="430,473,0,0" VerticalAlignment="Top" Width="365" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="3"/>
+        <Label Content="Impôt sur le Revenu Marginal Estimé :" HorizontalAlignment="Left" Margin="185,530,0,0" VerticalAlignment="Top" Width="351" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="Taux du Prélèvement Libératoire :" HorizontalAlignment="Left" Margin="22,578,0,0" VerticalAlignment="Top" Width="298" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Montant du Prélèvement :" HorizontalAlignment="Left" Margin="38,578,0,0" VerticalAlignment="Top" Width="246" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="TauxPrelevtLibM" HorizontalAlignment="Left" Margin="325,578,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" IsReadOnly="True" Background="{x:Null}"/>
+        <TextBox x:Name="MontantPrelevtM" HorizontalAlignment="Left" Margin="188,578,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" Grid.Column="2" IsReadOnly="True" Background="{x:Null}"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="421,578,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Les Prélèvements Sociaux sont de 17.20% soit :" HorizontalAlignment="Left" Margin="139,637,0,0" VerticalAlignment="Top" Width="417" FontSize="18" Grid.ColumnSpan="3" FontWeight="Bold"/>
+        <TextBox x:Name="PrelevtSociauxM" HorizontalAlignment="Left" Margin="6,637,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" Grid.Column="2" IsReadOnly="True" Background="{x:Null}"/>
+        <Rectangle HorizontalAlignment="Left" Height="23" Stroke="Black" VerticalAlignment="Top" Width="1010" Grid.ColumnSpan="3" Fill="#FFF92A0A" Margin="0,697,0,0"/>
+        <Button x:Name="Btn_Clear" Content="Autre Calcul ?" HorizontalAlignment="Left" Margin="43,731,0,0" VerticalAlignment="Top" Height="106" Width="126" FontWeight="Bold" FontSize="14" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="Btn_Clear_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/calculette2 (2).png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btn_Sortie" Content="" HorizontalAlignment="Left" Margin="272,734,0,0" VerticalAlignment="Top" Height="103" Width="105" Click="Btn_Sortie_Click" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/exit-symbol-1_icon-icons.com_70162.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="35,10,0,0" VerticalAlignment="Top" Width="100" Source="/calculette.png"/>
+        <Button x:Name="Btn_CalculsM" Content="CALCUL FISCAL" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="45" Margin="360,0,0,0" VerticalAlignment="Center" Width="260" FontSize="20" FontWeight="Bold" Background="#FFF90808" Click="Btn_CalculsM_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Grid.Column="2" Content="Facultatif" HorizontalAlignment="Left" Margin="213,351,0,0" VerticalAlignment="Top" Width="126" FontSize="18" FontWeight="Bold" FontStyle="Italic"/>
+        <RichTextBox x:Name="Commentaire" Margin="259,751,365,10" Grid.ColumnSpan="3" Background="{x:Null}" TextChanged="Commentaire_TextChanged" IsReadOnly="True" FontWeight="Bold" FontStyle="Italic">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="A partir de 8 ans, après les abattements, le prélèvement sera de 12.80% sur la part des primes supérieures à 150 000 euros. Le calcul du seuil des 150 000 euros s'effectue par contribuable et sur l'ensemble des contrats détenus."/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox x:Name="PlusValueBruteM" HorizontalAlignment="Left" Margin="238,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" IsReadOnly="True" Background="{x:Null}" Foreground="#FF190202"/>
+        <TextBox x:Name="PlusValueNetteRM" HorizontalAlignment="Left" Margin="240,473,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" IsReadOnly="True" Background="{x:Null}" Grid.Column="2"/>
+        <TextBox x:Name="IRPPMargM" HorizontalAlignment="Left" Margin="77,530,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" TextAlignment="Center" FontWeight="Bold" Height="34" FontSize="18" IsReadOnly="True" Background="{x:Null}" Grid.ColumnSpan="2" Foreground="#FF100101" Grid.Column="1"/>
+
+    </Grid>
+</Window>

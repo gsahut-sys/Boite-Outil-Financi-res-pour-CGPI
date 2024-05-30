@@ -1,0 +1,75 @@
+﻿<Window x:Class="ProjetCGPI_v0.Performance_Pondéree"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetCGPI_v0"
+        mc:Ignorable="d"
+        Title="Performance_Pondéree" Height="750" Width="1000" WindowStartupLocation="CenterScreen" Background="Gray" ResizeMode="NoResize">
+    <Grid x:Name="Nx_Calcul">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="141*"/>
+            <ColumnDefinition Width="376*"/>
+            <ColumnDefinition Width="364*"/>
+            <ColumnDefinition Width="119*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98"></RowDefinition>
+            <RowDefinition Height="200*"></RowDefinition>
+            <RowDefinition Height="279*"></RowDefinition>
+            <RowDefinition Height="157*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Label Content="Performance Annuelle AvecTemporalité des Mouvements" Margin="45,24,14,5" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFEC6526" Grid.ColumnSpan="4"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="36,14,0,0" VerticalAlignment="Top" Width="100" Source="/calculette.png" Grid.RowSpan="2"/>
+        <Label Content="Valorisation de l'Actif au 1er Janvier :" HorizontalAlignment="Left" Margin="79,53,0,0" Grid.Row="1" VerticalAlignment="Top" Width="431" FontSize="24" FontFamily="Arial Nova" FontWeight="Bold" Height="34" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="Valorisation de l'Actif à fin d'année :" HorizontalAlignment="Left" Margin="96,113,0,0" Grid.Row="1" VerticalAlignment="Top" Width="416" FontSize="24" FontFamily="Arial Nova" FontWeight="Bold" Height="34" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="0,185,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFEC6526" Grid.ColumnSpan="4"/>
+        <Label Content="Performance de l'Actif :" HorizontalAlignment="Left" Margin="42,74,0,0" Grid.Row="3" VerticalAlignment="Top" Width="264" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Foreground="Black" Height="37" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Perf" HorizontalAlignment="Left" Margin="170,68,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Height="49" Background="{x:Null}" FontSize="36" FontFamily="Arial Nova" TextAlignment="Center" Foreground="#FFE6F300" FontWeight="Bold" Grid.Column="1" RenderTransformOrigin="0.492,0.102"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="360,79,0,0" Grid.Row="3" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" RenderTransformOrigin="0.311,0.151" Width="36" Height="38" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="206,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="90" Width="99" FontWeight="Bold" Click="Button_Click" Grid.Column="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/calculette2 (2).png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="NOUVEAU CALCUL" HorizontalAlignment="Left" Margin="198,121,0,0" Grid.Row="3" VerticalAlignment="Top" Width="122" FontWeight="Bold" FontStyle="Italic" Height="26" Grid.Column="2"/>
+        <Button x:Name="Btn_Sortie" Content="" HorizontalAlignment="Left" Margin="343,37,0,0" Grid.Row="3" VerticalAlignment="Top" Height="92" Width="91" Click="Btn_Sortie_Click" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="/exit-symbol-1_icon-icons.com_70162.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="ValoInit" HorizontalAlignment="Left" Margin="143,57,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="34" TextAlignment="Center" FontSize="20" RenderTransformOrigin="0.676,-1.175" TextChanged="ValoInit_TextChanged" TabIndex="1" Grid.Column="2" FontWeight="Bold"/>
+        <TextBox x:Name="ValoFinale" HorizontalAlignment="Left" Margin="142,116,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="34" TextAlignment="Center" FontSize="20" RenderTransformOrigin="0.676,-1.175" TextChanged="ValoFinale_TextChanged" TabIndex="2" Grid.Column="2" FontWeight="Bold"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="316,53,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Column="2"/>
+        <Label Content="€" HorizontalAlignment="Left" Margin="316,117,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Grid.Column="2"/>
+        <Label Content="AJOUT D'UN MOUVEMENT :" HorizontalAlignment="Left" Margin="24,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="288" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="SENS:" HorizontalAlignment="Left" Margin="173,48,0,0" Grid.Row="2" VerticalAlignment="Top" Width="76" FontSize="20" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="MONTANT :" HorizontalAlignment="Left" Margin="173,126,0,0" Grid.Row="2" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold" Grid.Column="1" RenderTransformOrigin="0.48,1.203"/>
+        <Label Content="Valorisation pondérée des Mouvements :" HorizontalAlignment="Left" Margin="103,192,0,0" Grid.Row="2" VerticalAlignment="Top" Width="390" FontSize="20" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="#FFF9D903" FontStyle="Italic" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Left" Height="15" Margin="0,264,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="1000" Fill="#FFEC6526" Grid.ColumnSpan="4"/>
+        <Label Content="DATE:" HorizontalAlignment="Left" Margin="173,84,0,0" Grid.Row="2" VerticalAlignment="Top" Width="76" FontSize="20" FontWeight="Bold" Grid.Column="1"/>
+        <Button x:Name="Btn_AjoutMvt" Grid.Column="2" Content="AJOUTER" HorizontalAlignment="Left" Margin="162,53,0,0" Grid.Row="2" VerticalAlignment="Top" Height="93" Width="130" FontSize="20" FontWeight="Bold" Background="#FFEC6526" Click="Btn_AjoutMvt_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <ComboBox x:Name="ComboSens" Grid.Column="1" HorizontalAlignment="Left" Margin="264,52,0,0" Grid.Row="2" VerticalAlignment="Top" Width="106" FontSize="18">
+            <ComboBoxItem Content="APPORT"/>
+            <ComboBoxItem Content="RETRAIT"/>
+        </ComboBox>
+        <TextBox x:Name="DateMvt" Grid.Column="1" HorizontalAlignment="Left" Margin="264,94,0,0" Grid.Row="2" TextWrapping="Wrap" Text="JJ/MM" VerticalAlignment="Top" Width="106" Height="23" TextAlignment="Center" FontSize="14" FontWeight="Bold" TabIndex="3"/>
+        <TextBox x:Name="MontantMvt" HorizontalAlignment="Left" Margin="317,129,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="34" TextAlignment="Center" FontSize="20" RenderTransformOrigin="0.676,-1.175" TextChanged="ValoFinale_TextChanged" TabIndex="4" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <TextBox x:Name="CumulMvt" Grid.Column="2" HorizontalAlignment="Left" Margin="117,199,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" TextAlignment="Center" FontSize="16" FontStyle="Italic" Background="{x:Null}" Foreground="#FFEDDA07" Height="30"/>
+        <Button x:Name="Btn_Perf" Grid.Column="1" Content="Calcul de Performance" HorizontalAlignment="Left" Margin="237,255,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="67" Grid.RowSpan="2" Width="236" FontSize="20" FontWeight="Bold" Background="#FFEC6526" Click="Btn_Perf_Click">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+
+    </Grid>
+
+</Window>
